@@ -2,21 +2,19 @@
 using FileSystem_Honeywell.Model;
 using FileSystem_Honeywell.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddDbContext<FSDBContext>(options =>
-//{
-//   var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-//    options.UseSqlServer(connectionString);
-//});
+builder.Services.AddDbContext<FSDBContext>(options =>
+{
+   var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    options.UseSqlServer(connectionString);
+});
 
 
 var jwtSection = builder.Configuration.GetSection("Jwt");
