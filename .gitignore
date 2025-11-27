@@ -1,0 +1,37 @@
+# Visual Studio
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+
+# EF Core Migrations snapshot (optional)
+# Migrations/
+
+# Sensitive keys
+secrets.json
+
+# macOS
+.DS_Store
+
+# Node / React
+node_modules/
+dist/
+npm-debug.log
+pnpm-debug.log
+yarn-error.log
+
+# Logs
+*.log
+
+# Build artifacts
+*.dll
+*.pdb
+
+# Publish folder
+publish/
